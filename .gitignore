@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# env
+.env
+
+# vscode
+.vscode/
+
+# temp
+temp/*
+
