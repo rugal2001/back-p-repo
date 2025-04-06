@@ -1,8 +1,8 @@
-import config from "../../config";
+import config from "@/config";
 import express from "express";
 const compression = require("compression");
 const cors = require("cors");
-import mainRoutes from "../../routes";
+import mainRoutes from "@/routes";
 
 export default function expressLoader(app: any) {
   app.get("/version", (req: any, res: any) => {

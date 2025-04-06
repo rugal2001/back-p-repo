@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon src/index.ts"
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts"
   },
   "keywords": [],
   "author": "ibrahim",
@@ -16,15 +16,22 @@
     "compression": "^1.8.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
+    "eventemitter2": "^6.4.9",
     "express": "^5.1.0",
+    "mongodb": "^6.15.0",
     "mongoose": "^8.13.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   },
-  "repository": "https://github.com/rugal2001/back-p-repo.git"
+  "repository": "https://github.com/rugal2001/back-p-repo.git",
+  "_moduleAliases": {
+    "@": "src/"
+  }
 }

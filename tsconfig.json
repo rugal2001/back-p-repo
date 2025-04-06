@@ -2,9 +2,10 @@
     "compilerOptions": {
       "target": "ES6",
       "module": "commonjs",
+      "baseUrl": ".",
       "paths": {
-      "@/*": ["./src/*"]
-       },
+        "@/*": ["src/*"]
+      },
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,

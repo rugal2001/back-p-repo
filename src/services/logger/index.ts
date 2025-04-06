@@ -1,5 +1,3 @@
-import { Logtail } from "@logtail/node";
-
 export default {
   info: (msg: any, ...props: any[]) => {
     console.log(msg, ...props);

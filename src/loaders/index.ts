@@ -1,7 +1,15 @@
 import expressLoader from "./express";
-import Logger from "../services/logger";
+import Logger from "@/services/logger";
+import mongooseLoader from "@/loaders/mongoose";
+// import { EventEmitter } from "@/services";
 
-export default function init(app: any) {
+export default async function init(app: any) {
+  await mongooseLoader();
+  Logger.info("👍🏻 Mongo DB loaded and connected!");
+
+  //   EventEmitter.start();
+  //   Logger.info("👍🏻 Event Emitter Started!");
+
   expressLoader(app);
-  Logger.info("✅ Express app loaded!");
+  Logger.info("👍🏻 Express app loaded!");
 }
