@@ -5,7 +5,7 @@ node_modules/
 *.log
 
 # env
-.env
+.dev.env
 
 # vscode
 .vscode/
@@ -13,3 +13,8 @@ node_modules/
 # temp
 temp/*
 
+
+# Yarn
+yarn-error.log
+.yarn-integrity
+yarn.lock

@@ -1,12 +1,17 @@
 import express from "express";
+import config from "./config";
+import Loaders from "./loaders";
 
-const app = express();
-const PORT = 60000;
+async function start() {
+  const app = express();
+  await Loaders(app);
+  app.listen(config.port, () => {
+    console.log(`
+      ################################################
+      🛡️  Server listening on port: ${config.port} 🛡️ 
+      ################################################
+    `);
+  });
+}
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+start();
